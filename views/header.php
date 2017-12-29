@@ -13,6 +13,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="<?php echo URL ?>public/js/materialize.min.js"></script>
-    <?php if(isset($this->javascript)){ echo '<script type="text/javascript" src="'.$this->javascript.'"></script>'; } ?>
-    <?php if(isset($this->css)){ echo '<link rel="stylesheet" type="text/css" href="'.$this->css.'" />'; } ?>
+    <?php if(isset($this->javascript)){ echo '<script type="text/javascript" src="'. URL . $this->javascript.'"></script>'; } ?>
+    <?php if(isset($this->css)){ echo '<link rel="stylesheet" type="text/css" href="'. URL . $this->css.'" />'; } ?>
 </head>
