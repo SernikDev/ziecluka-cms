@@ -1,0 +1,1 @@
+<?php include PANEL_LAYOUT . "panel/layout/core/footer.php"; ?>

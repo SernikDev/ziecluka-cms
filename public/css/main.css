@@ -1,0 +1,183 @@
+/* 
+    Created on : 2017-10-30, 22:49:08
+    Author     : Lukasz Ziec
+*/
+
+nav, .page-footer {
+    background-color: #1b5e20;
+}
+
+.site-logo {
+    padding: 7px 0px;
+}
+
+.nav-weight {
+    font-weight: 600;
+}
+
+.parallax-container {
+    height: 600px;
+}
+
+.header-icon {
+    font-size: 2.92rem;
+}
+
+.right-flex {
+    margin-left: auto;
+}
+
+.h600 {
+    height: 600px !important;
+}
+
+.scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.nav-weight > li > a.active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fa {
+    font-size: 20px;
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    background: white;
+}
+
+.fa:hover {
+    color: white;
+    background: black;
+}
+
+.parallax-container {
+
+    height: 300px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.go {
+    font-size: 0px;
+    font-weight: lighter;
+}
+
+.goimg {
+    opacity: 0;
+}
+
+#h1 > span, #h2 > span, #h3 > span, #h4 > span {
+    color: yellow;
+}
+
+#h1, #h3 {
+    margin-left: -3000px;
+}
+
+#h2, #h4 {
+    margin-right: -3000px;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+.circle-box {
+    border-radius: 50%;
+    display: inline-block;
+    padding: 12px;
+}
+
+.lang {
+    padding: 20px;
+    font-size: 28px;
+}
+
+.btw {
+    border-top: 1px solid white !important;
+}
+
+.card.h200 {
+    height: 220px;
+}
+
+.card-content.btw {
+    padding:10px !important;
+}
+
+.card-image.h50 {
+    height: 50% !important;
+}
+
+.parallax-container.valign-wrapper div {
+    width: 100%;
+}
+
+.paralax-title {
+    font-weight: 300;
+}
+
+.navbar-fixed { 
+    z-index: 9999;
+}
+
+@media only screen and (min-width: 601px) {
+    .paralax-title {
+        font-size: 36px;
+    }
+    
+    .p1 {
+        height: 700px !important;
+        background-image: url("../img/1st.jpeg");
+        font-weight: lighter;
+        overflow: hidden;
+    }
+
+    #h1, #h2, #h3, #h4 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 660px) {
+    #h1, #h2, #h3, #h4 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .paralax-title {
+        font-size: 50px;
+    }   
+}
+
+@media only screen and (max-width: 600px) {
+    .p1 {
+        height: 700px !important;
+        overflow: hidden;
+        font-weight: lighter;
+        background-color: #1b5e20;
+    }
+
+    #h1, #h2, #h3, #h4 {
+        font-size: 18px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .max-height {
+        max-height: 50% !important;
+    }   
+}

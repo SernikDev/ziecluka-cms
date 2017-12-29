@@ -1,0 +1,145 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-08-10, 20:38:57
+    Author     : Łukasz
+*/
+
+#panel-avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#site-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-left {
+    margin-left: 20px;
+}
+
+.nav-right {
+    margin-right: 20px;
+}
+
+div.left-menu > div > a {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+}
+
+div.left-menu > div > a:hover {
+    border: 1px solid #388e3c !important;
+    background-color: #388e3c !important;
+    color: #ffffff !important;
+}
+
+div.left-menu > div > a:first-child {
+    border: 1px solid #424242;
+    border-radius: 3px;
+}
+
+div.left-menu > div > a:first-child:hover {
+    border: 1px solid #424242;
+    border-radius: 3px;
+}
+
+div.left-menu > div > a > i {
+    margin-left: 15px;
+}
+
+.main-menu {
+    margin: 5px;
+    padding: 5px !important;
+    border: 1px solid #bdbdbd;
+    border-radius: 3px;
+}
+
+div.main-menu > i {
+    margin-left: 15px;
+}
+
+.header {
+    margin-bottom: 15px;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.popup {
+    background:#e1e1e1; 
+    margin: 0 auto;
+    width:92%; 
+    position:absolute; 
+    z-index:41;
+    top: 25%;
+    padding:30px; 
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+
+.justify-algin {
+    text-align: justify;
+}
+
+.topmodal {
+    top: 20% !important;
+}
+
+.middlemodal {
+    top: 50% !important;
+}
+
+.greenhover:hover {
+    color: green;
+}
+
+.modal {
+    width:25% !important;
+}
+
+.modalgallery {
+    width:80% !important;
+}
+
+.card-image-custom-gallery {
+    max-height:70% !important;
+}
+
+.card-content-custom-gallery {
+    max-height:30% !important;
+}
+
+.error-title {
+    font-size:24px;
+    font-weight: 300;
+    padding:10px;
+}
+
+.success-title {
+    font-size:24px;
+    font-weight: 300;
+    padding:10px; 
+}
+
+#progress p
+{
+    display: block;
+    width: 240px;
+    padding: 2px 5px;
+    margin: 2px 0;
+    border: 1px inset #446;
+    border-radius: 5px;
+}
