@@ -7,7 +7,7 @@
             </div>
             <div class="row">
                 <div class="col xl12 l8 m10 s12 offset-l2 offset-m1">
-                    <img class="circle col xl2 l4 m4 s6 offset-xl5 offset-l4 offset-m4 offset-s3 goimg" src="<?php echo URL ?>upload/images/avatar/lz.jpg" />
+                    <img class="circle col xl2 l4 m4 s6 offset-xl5 offset-l4 offset-m4 offset-s3 goimg" src="<?php echo URL ?>upload/images/avatar/lz-1.jpg" />
                 </div>
             </div>
             <div class="row">
@@ -270,7 +270,7 @@
             <h3 class="blue-text">O Autorze</h3>
             <div class="row">
                 <div class="col xl12 l12 m10 s12 offset-m1">
-                    <img class="circle col xl2 l4 m4 s6 offset-xl5 offset-l4 offset-m4 offset-s3" src="<?php echo URL ?>upload/images/avatar/lz.jpg" />
+                    <img class="circle col xl2 l4 m4 s6 offset-xl5 offset-l4 offset-m4 offset-s3" src="<?php echo URL ?>upload/images/avatar/lz-1.jpg" />
                 </div>
             </div>
             <div class="flow-text justify-algin">
