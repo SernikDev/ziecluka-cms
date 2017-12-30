@@ -2,6 +2,15 @@
     Created on : 2017-10-30, 22:49:08
     Author     : Lukasz Ziec
 */
+.js div#preloader { position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; overflow: visible; background: #ffff; }
+
+
+.loader {
+    left: calc(50% - 32px);
+    top: calc(50% - 32px);
+    position: fixed;
+    z-index: 99999;
+}
 
 nav, .page-footer {
     background-color: #1b5e20;
@@ -134,7 +143,7 @@ nav, .page-footer {
     .paralax-title {
         font-size: 36px;
     }
-    
+
     .p1 {
         height: 700px !important;
         background-image: url("../img/1st.jpg");
