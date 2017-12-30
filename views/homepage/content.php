@@ -2,34 +2,34 @@
 <div class="row p1">
     <div class="row center white-text">
         <div class="container">
-            <div class="col xl12 l12 m12 s12">
+            <div class="col s12">
                 <h1 class="go">Programowanie webowe</h1>
             </div>
             <div class="row">
                 <div class="col xl12 l8 m10 s12 offset-l2 offset-m1">
-                    <img class="circle col xl2 l4 m4 s6 offset-xl5 offset-l4 offset-m4 offset-s3 goimg" src="<?php echo URL ?>upload/images/avatar/lz-1.jpg" />
+                    <img class="circle col xl2 m4 s6 offset-xl5 offset-m4 offset-s3 goimg" src="<?php echo URL ?>upload/images/avatar/lz-1.jpg" />
                 </div>
             </div>
             <div class="row">
-                <div class="col xl6 l6 m6 s8 offset-xl3 offset-l3 offset-m3 offset-s2">
+                <div class="col m6 s8 offset-m3 offset-s2">
                     <div class="col xl6 l8 m10 s12 offset-xl3 offset-l2 offset-m1 goimg no-padding">
-                        <div class="col xl3 l3 m3 s3"><a href="https://www.facebook.com/ziecluka"><i class="fa fa-facebook"></i></a></div>
-                        <div class="col xl3 l3 m3 s3"><a href="https://github.com/SernikDev"><i class="fa fa-github"></i></a></div>
-                        <div class="col xl3 l3 m3 s3"><a href="https://www.linkedin.com/in/lukasz-ziec/"><i class="fa fa-linkedin"></i></a></div>
-                        <div class="col xl3 l3 m3 s3"><a href="https://stackoverflow.com/users/6270466/l-z"><i class="fa fa-stack-overflow"></i></a></div>
+                        <div class="col s3"><a href="https://www.facebook.com/ziecluka"><i class="fa fa-facebook"></i></a></div>
+                        <div class="col s3"><a href="https://github.com/SernikDev"><i class="fa fa-github"></i></a></div>
+                        <div class="col s3"><a href="https://www.linkedin.com/in/lukasz-ziec/"><i class="fa fa-linkedin"></i></a></div>
+                        <div class="col s3"><a href="https://stackoverflow.com/users/6270466/l-z"><i class="fa fa-stack-overflow"></i></a></div>
                     </div>
                 </div>
             </div>
-            <div class="row col xl12 l12 m12 s12">
+            <div class="row col s12">
                 <div id="h1"><span>{ </span>Techniczny blog<span> }</span></div>
             </div>
-            <div class="row col xl12 l12 m12 s12">
+            <div class="row col s12">
                 <div id="h2"><span>{ </span>Ciekawe projekty<span> }</span></div>
             </div>
-            <div class="row col xl12 l12 m12 s12">
+            <div class="row col s12">
                 <div id="h3"><span>{ </span>Pełny source code do wglądu i wykorzystania<span> }</span></div>
             </div>
-            <div class="row col xl12 l12 m12 s12">
+            <div class="row col s12">
                 <div id="h4"><span>{ </span>Zapraszam do kontaktu!<span> }</span></div>
             </div>
         </div>
@@ -37,7 +37,6 @@
 </div>
 
 <script>
-
     $(document).ready(function () {
         if ($(window).width() < 700 && $(window).width() > 400) {
             $(".go").animate({
@@ -72,13 +71,12 @@
             marginLeft: "0"
         }, 200);
     });
-
 </script>
 
 <div class="section scrollspy">
     <div class="container">
         <div class="row">
-            <div class="col xl8 l8 m10 s12 offset-xl2 offset-l2 offset-m1">
+            <div class="col l8 m10 s12 offset-l2 offset-m1">
                 <div class="card hoverable">
                     <div class="card-content">
                         <div class="row">
@@ -88,15 +86,15 @@
                             <p class="flow-text justify-algin">Już teraz zapisz się do newslettera, aby otrzymywać powiadomienia o nowych wpisach oraz projektach.</p>
                         </div>
                         <div class="row">
-                            <div class="input-field col xl8 l8 m10 s12 offset-xl2 offset-l2 offset-m1">
+                            <div class="input-field col l8 m10 s12 offset-l2 offset-m1">
                                 <input id="name" name="name" type="text" class="validate">
                                 <label for="name">Wprowadź swoje imię</label>
                             </div>
-                            <div class="input-field col xl8 l8 m10 s12 offset-xl2 offset-l2 offset-m1">
+                            <div class="input-field col l8 m10 s12 offset-l2 offset-m1">
                                 <input id="email" name="email" type="text" class="validate">
                                 <label for="email">Wprowadź swój adres e-mail</label>
                             </div>
-                            <div class="input-field col xl8 l8 m10 s12 offset-xl2 offset-l2 offset-m1 center">
+                            <div class="input-field col l8 m10 s12 offset-l2 offset-m1 center">
                                 <input class="btn green darken-4 tooltipped" type="submit" value="Zapisz się!" />
                             </div>
                         </div>
@@ -133,7 +131,7 @@
     <div class="row">
         <?php foreach ($this->blog as $blog): ?>
             <!-- Article Start -->
-            <div class="col xl3 l6 m12 s12">
+            <div class="col xl3 l6 s12">
                 <div class="card large h600 hoverable">
                     <div class="card-image h50">
                         <a href="<?php echo $blog["blog_url"] ?>"><img src="<?php echo URL . $blog["path"] ?>"></a>
@@ -183,12 +181,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col xl10 l12 m12 offset-xl1">
+        <div class="col xl10 s12 offset-xl1">
             <div class="row">
                 <h4 class="blue-text lighter center">Języki, które głównie wykorzystuje w swoich projektach</h4>
             </div>
             <div class="row">
-                <div class="col xl4 l4 m6">
+                <div class="col l4 m6 s12">
                     <div class="card h200 indigo white-text">
                         <div class="card-title center">
                             <div class="lang">{ PHP }</div>
@@ -198,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col xl4 l4 m6">
+                <div class="col l4 m6 s12">
                     <div class="card h200 yellow accent-4 white-text">
                         <div class="card-title center">
                             <div class="lang">{ JavaScript }</div>
@@ -208,7 +206,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col xl4 l4 m6 offset-m3">
+                <div class="col l4 m6 s12 offset-m3">
                     <div class="card h200 red white-text">
                         <div class="card-title center">
                             <div class="lang">{ SQL }</div>
@@ -220,7 +218,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col xl4 l4 m6 offset-xl2 offset-l2">
+                <div class="col l4 m6 s12 offset-xl2 offset-l2">
                     <div class="card h200 orange white-text">
                         <div class="card-title center">
                             <div class="lang">{ HTML }</div>
@@ -230,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col xl4 l4 m6">
+                <div class="col l4 m6 s12">
                     <div class="card h200 blue white-text">
                         <div class="card-title center">
                             <div class="lang">{ CSS }</div>
@@ -269,8 +267,8 @@
             <i class="material-icons left green-text text-darken-4 header-icon">person</i>
             <h3 class="blue-text">O Autorze</h3>
             <div class="row">
-                <div class="col xl12 l12 m10 s12 offset-m1">
-                    <img class="circle col xl2 l4 m4 s6 offset-xl5 offset-l4 offset-m4 offset-s3" src="<?php echo URL ?>upload/images/avatar/lz-1.jpg" />
+                <div class="col l12 m10 s12 offset-m1">
+                    <img class="circle col xl2 m4 s6 offset-xl5 offset-m4 offset-s3" src="<?php echo URL ?>upload/images/avatar/lz-1.jpg" />
                 </div>
             </div>
             <div class="flow-text justify-algin">
@@ -313,7 +311,7 @@
     </div>
     <div class="row">
         <div class="container">
-            <div class="col xl8 l10 m12 s12 offset-xl2 offset-l1">
+            <div class="col xl8 l10 s12 offset-xl2 offset-l1">
                 <div class="card hoverable">
                     <div class="card-content">
                         <div class="row">
@@ -322,26 +320,26 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col xl8 l10 m10 s12 offset-xl2 offset-l1 offset-m1">
+                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
                                 <select name="topic">
                                     <option value="" disabled selected>Określ temat</option>
                                     <option value="0">Wiadomość / Pytanie</option>
                                     <option value="1">Sugestia tematu na bloga</option>
                                 </select>
                             </div>
-                            <div class="input-field col xl8 l10 m10 s12 offset-xl2 offset-l1 offset-m1">
+                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
                                 <input id="fk-name" name="fk-name" type="text" class="validate">
                                 <label for="fk-name">Wprowadź swoje imię</label>
                             </div>
-                            <div class="input-field col xl8 l10 m10 s12 offset-xl2 offset-l1 offset-m1">
+                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
                                 <input id="fk-email" name="fk-email" type="text" class="validate">
                                 <label for="fk-email">Wprowadź swój adres e-mail</label>
                             </div>
-                            <div class="input-field col xl8 l10 m10 s12 offset-xl2 offset-l1 offset-m1">
+                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
                                 <textarea id="fk-message" class="materialize-textarea"></textarea>
                                 <label for="fk-message">Treść wiadomości</label>
                             </div>
-                            <div class="input-field col xl8 l10 m10 s12 offset-xl2 offset-l1 offset-m1 center">
+                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1 center">
                                 <input class="btn green darken-4 tooltipped" type="submit" value="Wyślij" />
                             </div>
                         </div>
