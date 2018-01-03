@@ -320,7 +320,7 @@
                                 <h4 class="blue-text lighter">Formularz kontaktowy</h4>
                             </div>
                         </div>
-                        <form action="#" method="POST">
+                        <form action="xhr/ContactForm" method="POST">
                             <div class="row">
                                 <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
                                     <input id="fk-name" name="fk-name" type="text" data-required="required" data-type="text">
