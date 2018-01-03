@@ -72,7 +72,6 @@
         }, 200);
     });
 </script>
-
 <div class="section scrollspy">
     <div class="container">
         <div class="row">
@@ -85,19 +84,21 @@
                             </div>
                             <p class="flow-text justify-algin">Już teraz zapisz się do newslettera, aby otrzymywać powiadomienia o nowych wpisach oraz projektach.</p>
                         </div>
-                        <div class="row">
-                            <div class="input-field col l8 m10 s12 offset-l2 offset-m1">
-                                <input id="name" name="name" type="text" class="validate">
-                                <label for="name">Wprowadź swoje imię</label>
+                        <form id="newsletter" action="xhr/SignToNewsletter" method="POST">
+                            <div class="row">
+                                <div class="input-field col l8 m10 s12 offset-l2 offset-m1">
+                                    <input id="name" name="name" type="text" data-required="required" data-type="text">
+                                    <label for="name">Wprowadź swoje imię</label>
+                                </div>
+                                <div class="input-field col l8 m10 s12 offset-l2 offset-m1">
+                                    <input id="email" name="email" type="text" data-required="required" data-type="email">
+                                    <label for="email">Wprowadź swój adres e-mail</label>
+                                </div>
+                                <div class="input-field col l8 m10 s12 offset-l2 offset-m1 center">
+                                    <input id="submit" class="btn green darken-4 tooltipped" type="submit" value="Zapisz się!" />
+                                </div>
                             </div>
-                            <div class="input-field col l8 m10 s12 offset-l2 offset-m1">
-                                <input id="email" name="email" type="text" class="validate">
-                                <label for="email">Wprowadź swój adres e-mail</label>
-                            </div>
-                            <div class="input-field col l8 m10 s12 offset-l2 offset-m1 center">
-                                <input class="btn green darken-4 tooltipped" type="submit" value="Zapisz się!" />
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -319,30 +320,29 @@
                                 <h4 class="blue-text lighter">Formularz kontaktowy</h4>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                <select name="topic">
-                                    <option value="" disabled selected>Określ temat</option>
-                                    <option value="0">Wiadomość / Pytanie</option>
-                                    <option value="1">Sugestia tematu na bloga</option>
-                                </select>
+                        <form action="#" method="POST">
+                            <div class="row">
+                                <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
+                                    <input id="fk-name" name="fk-name" type="text" data-required="required" data-type="text">
+                                    <label for="fk-name">Wprowadź swoje imię</label>
+                                </div>
+                                <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
+                                    <input id="fk-email" name="fk-email" type="text" data-required="required" data-type="email">
+                                    <label for="fk-email">Wprowadź swój adres e-mail</label>
+                                </div>
+                                <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
+                                    <input id="fk-topic" name="fk-topic" type="text" data-required="required" data-type="text">
+                                    <label for="fk-topic">Temat wiadomości</label>
+                                </div>
+                                <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
+                                    <textarea id="fk-message" class="materialize-textarea" data-required="required" data-type="text"></textarea>
+                                    <label for="fk-message">Treść wiadomości</label>
+                                </div>
+                                <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1 center">
+                                    <input class="btn green darken-4 tooltipped" type="submit" value="Wyślij" />
+                                </div>
                             </div>
-                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                <input id="fk-name" name="fk-name" type="text" class="validate">
-                                <label for="fk-name">Wprowadź swoje imię</label>
-                            </div>
-                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                <input id="fk-email" name="fk-email" type="text" class="validate">
-                                <label for="fk-email">Wprowadź swój adres e-mail</label>
-                            </div>
-                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                <textarea id="fk-message" class="materialize-textarea"></textarea>
-                                <label for="fk-message">Treść wiadomości</label>
-                            </div>
-                            <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1 center">
-                                <input class="btn green darken-4 tooltipped" type="submit" value="Wyślij" />
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
