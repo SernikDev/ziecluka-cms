@@ -4,12 +4,14 @@ class Xhr extends Controller {
 
     function __construct() {
         parent::__construct();
+        $this->validator = new Validator();
     }
 
     function SignToNewsletter() {
-//        $obj = file_get_contents("php://input");
-//        $a = json_decode($obj);
-//        echo $a->email . $a->name;
+        print_r($_POST);
+    }
+    
+    function ContactForm() {
         print_r($_POST);
     }
 
