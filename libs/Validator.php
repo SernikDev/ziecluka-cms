@@ -14,6 +14,23 @@ class Validator {
     /** @var array $_error Holds the current form error */
     private $_error = array();
 
+    
+    /**
+     * checkPost - compare POST keys with declared keys
+     * @param type $data - array with declared keys
+     * @param type $post - array with POST keys
+     * @return boolean
+     */
+    public function checkPost($data = array(), $post) {
+        $fields = array_fill_keys($data, '');
+        
+        if(array_diff_key($fields, $post)){
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
     /**
      * post - this is to run $_POST
      */
@@ -28,7 +45,7 @@ class Validator {
      * @param mixed $fieldName
      * @return mixed string or array
      */
-    public function fetch($fieldName = false) {
+    public function returnData($fieldName = false) {
         if ($fieldName) {
             if (isset($this->_postData[$fieldName])) {
                 return $this->_postData[$fieldName];
@@ -55,37 +72,36 @@ class Validator {
             $this->_error[$this->_currentItem] = $error;
         }
 
-
         return $this;
     }
 
-    public function submit() {
+    public function validationResult() {
         if (empty($this->_error)) {
             return true;
         } else {
-            return $this->_error;
+            return false;
         }
     }
 
     public function minlength($data, $arg) {
 
         if (strlen($data) < $arg) {
-            return "Your string can only be $arg long.";
+            return "Pole powinno zawierać minimalnie $arg znaków.";
         }
     }
 
     public function maxlength($data, $arg) {
 
         if (strlen($data) > $arg) {
-            return "Your string can only be $arg long.";
+            return "Pole powinno zawierać maksymalnie $arg znaków.";
         }
     }
-    
-    public function testlogin($data) {
-        if (preg_match_all('/[:alnum:]{6,20}/', $data)){
-            return true;
-        } else
-            return 'Pole login może zawierać litery lub cyfry, minimalna liczba znaków to 6, a maksymalna to 20.';
+
+    public function email($data) {
+        
+        if (!filter_var($data, FILTER_VALIDATE_EMAIL)){
+            return "Adres email $data jest niepoprawny.";
+        }
     }
 
 }

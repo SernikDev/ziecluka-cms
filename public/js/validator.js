@@ -26,16 +26,35 @@ $(document).ready(function () {
             }
         });
 
+        function success() {
+            $('input[type=submit]', t).attr('disabled', true);
+            $(d).val('').removeClass('valid');
+            setTimeout(function () {
+                $('input[type=submit]', t).attr('disabled', false);
+            }, 10000);
+        }
+
         if (d.length === k.length) {
             $.ajax({
                 type: $(this).attr('method'),
                 cache: false,
                 url: $(this).attr('action'),
                 data: $(this).serialize(),
-                dataType: 'html',
-                success: function (data) {
-                    // Get some response from server side script
-                }
+                dataType: 'json',
+                success: function (e) {
+                    if ("error" in e) {
+                        Materialize.toast(e.error.value, 10000, 'red');
+                    } else if ("formerror" in e) {
+                        Materialize.toast(e.formerror.value, 10000, 'red');
+                        setTimeout(function () {
+                            location.reload(1);
+                        }, 4000);
+                    } else {
+                        success();
+                        $(this).closest('form').find('input[type=submit]').attr('disabled', true);
+                        Materialize.toast(e.success.value, 10000, 'green darken-4');
+                    }
+                },
             });
         }
     });
@@ -48,7 +67,7 @@ $(document).ready(function () {
         var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
 
         /* Empty input validation with content message while data is required */
-        if (!$(t).val() && $(t).attr('data-required') === 'required') {
+        if (!$(t).val().trim() && $(t).attr('data-required') === 'required') {
             $(t).removeClass('valid').addClass('invalid');
             checkIfErrorMessageAlreadyExists(t, id, emptyError);
         } else {
@@ -59,7 +78,7 @@ $(document).ready(function () {
         ;
 
         /* Email input validation with content message whie data is required */
-        if ($(t).val() && $(t).attr('data-type') === 'email' && $(t).attr('data-required') === 'required') {
+        if ($(t).val().trim() && $(t).attr('data-type') === 'email' && $(t).attr('data-required') === 'required') {
             if (pattern.test($(t).val())) {
                 $(t).addClass('valid');
                 addDataResultAttribute(t, 'valid');
@@ -70,7 +89,7 @@ $(document).ready(function () {
         }
 
         /* Add valid class for simple filled text fields */
-        if ($(t).val() && $(t).attr('data-type') === 'text' && $(t).attr('data-required') === 'required') {
+        if ($(t).val().trim() && $(t).attr('data-type') === 'text' && $(t).attr('data-required') === 'required') {
             $(t).addClass('valid');
             addDataResultAttribute(t, 'valid');
         }

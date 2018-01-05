@@ -95,7 +95,7 @@
                                     <label for="email">Wprowadź swój adres e-mail</label>
                                 </div>
                                 <div class="input-field col l8 m10 s12 offset-l2 offset-m1 center">
-                                    <input id="submit" class="btn green darken-4 tooltipped" type="submit" value="Zapisz się!" />
+                                    <input class="btn green darken-4" type="submit" value="Zapisz się!" />
                                 </div>
                             </div>
                         </form>
@@ -323,23 +323,23 @@
                         <form action="xhr/ContactForm" method="POST">
                             <div class="row">
                                 <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                    <input id="fk-name" name="fk-name" type="text" data-required="required" data-type="text">
-                                    <label for="fk-name">Wprowadź swoje imię</label>
+                                    <input id="fkname" name="fkname" type="text" data-required="required" data-type="text">
+                                    <label for="fkname">Wprowadź swoje imię</label>
                                 </div>
                                 <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                    <input id="fk-email" name="fk-email" type="text" data-required="required" data-type="email">
-                                    <label for="fk-email">Wprowadź swój adres e-mail</label>
+                                    <input id="fkemail" name="fkemail" type="text" data-required="required" data-type="email">
+                                    <label for="fkemail">Wprowadź swój adres e-mail</label>
                                 </div>
                                 <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                    <input id="fk-topic" name="fk-topic" type="text" data-required="required" data-type="text">
-                                    <label for="fk-topic">Temat wiadomości</label>
+                                    <input id="fktopic" name="fktopic" type="text" data-required="required" data-type="text">
+                                    <label for="fktopic">Temat wiadomości</label>
                                 </div>
                                 <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1">
-                                    <textarea id="fk-message" class="materialize-textarea" data-required="required" data-type="text"></textarea>
-                                    <label for="fk-message">Treść wiadomości</label>
+                                    <textarea id="fkmessage" name="fkmessage" class="materialize-textarea" data-required="required" data-type="text"></textarea>
+                                    <label for="fkmessage">Treść wiadomości</label>
                                 </div>
                                 <div class="input-field col xl8 m10 s12 offset-xl2 offset-m1 center">
-                                    <input class="btn green darken-4 tooltipped" type="submit" value="Wyślij" />
+                                    <input class="btn green darken-4" type="submit" value="Wyślij" />
                                 </div>
                             </div>
                         </form>
