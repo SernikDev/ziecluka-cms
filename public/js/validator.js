@@ -31,7 +31,7 @@ $(document).ready(function () {
             $(d).val('').removeClass('valid').attr(disabled, true);
             setTimeout(function () {
                 $('input[type=submit]', t).attr('disabled', false);
-                $(d).attr(disabled, false);
+                $(d).attr('disabled', false);
             }, 10000);
         }
 
