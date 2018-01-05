@@ -28,9 +28,10 @@ $(document).ready(function () {
 
         function success() {
             $('input[type=submit]', t).attr('disabled', true);
-            $(d).val('').removeClass('valid');
+            $(d).val('').removeClass('valid').attr(disabled, true);
             setTimeout(function () {
                 $('input[type=submit]', t).attr('disabled', false);
+                $(d).attr(disabled, false);
             }, 10000);
         }
 
