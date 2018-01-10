@@ -196,7 +196,7 @@ class Bootstrap {
      */
     private function _error() {
         require $this->_controllerPath . $this->_errorFile;
-        $controller = new Error();
+        $controller = new CustomError();
         $controller->index();
         exit;
     }

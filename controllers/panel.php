@@ -26,7 +26,7 @@ class Panel extends Controller {
     /**
      * Login Page
      */
-    function login() {
+    function login() {        
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $login = $this->main->cleanInput($_POST['login']);

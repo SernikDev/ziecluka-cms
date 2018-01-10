@@ -37,7 +37,7 @@
 </div>
 
 <script>
-    $(document).ready(function () {
+    window.onload = function () {
         if ($(window).width() < 700 && $(window).width() > 400) {
             $(".go").animate({
                 fontSize: "40px"
@@ -70,7 +70,7 @@
             marginRight: "0",
             marginLeft: "0"
         }, 200);
-    });
+    };
 </script>
 <div class="section scrollspy">
     <div class="container">

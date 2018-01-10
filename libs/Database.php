@@ -8,14 +8,17 @@ class Database {
      * @return boolean
      */
     public function connect() {
-
-        if (!isset($this->connection)) {
-            $this->connection = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
+        try {
+            if (!isset($this->connection)) {
+                $this->connection = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8", DB_USER, DB_PASS);
+            }
+            return $this->connection;
+        } catch (PDOException $e) {
+            print "Error!: " . $e->getMessage() . "<br/>";
+            die();
         }
-
-        return $this->connection;
     }
-    
+
     /**
      * Closing database connection
      */
@@ -95,7 +98,7 @@ class Database {
         foreach ($array as $key => $value) {
             $pdo->bindValue("$key", $value);
         }
-        
+
         $pdo->execute();
 
         return $pdo;
