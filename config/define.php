@@ -32,7 +32,7 @@ define("URL", "http://localhost/mvcproject/");
 define("LIBS", "libs/");
 define("CONTROLLERS", "controllers/");
 define("MODELS", "models/");
-define("ERROR_FILE", "error.php");
+define("ERROR_FILE", "custom_error.php");
 define("START_PAGE", "homepage.php");
 define("START_PAGE_MODEL", "homepage");
 define("SUBFOLDER", "/mvcproject/");
