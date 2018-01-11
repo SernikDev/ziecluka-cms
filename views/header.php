@@ -1,6 +1,6 @@
 <?php header("Content-Type: text/html;charset=UTF-8"); ?>
 <!DOCTYPE html>
-<html class="js">
+<html lang="pl-PL" class="js">
 <head>
     <?php echo (!empty($this->metaTitle) ? "<title>" . $this->metaTitle . " - " . SITE_NAME ."</title>" : false) ?>
     <meta charset="UTF-8">
