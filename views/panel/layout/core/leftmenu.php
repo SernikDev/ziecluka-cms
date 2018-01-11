@@ -4,5 +4,6 @@
         <a class="white-text grey darken-3 valign-wrapper" href="<?php echo URL; ?>panel"><i class="material-icons left">computer</i>Dashboard</a>
         <a class="black-text white valign-wrapper" href="<?php echo URL; ?>blog_admin"><i class="material-icons left">import_contacts</i>Blog</a>
         <a class="black-text white valign-wrapper" href="<?php echo URL; ?>media"><i class="material-icons left">perm_media</i>Media</a>
+        <a class="black-text white valign-wrapper" href="<?php echo URL; ?>page_admin"><i class="material-icons left">pages</i>Page</a>
     </div>
 </div>
