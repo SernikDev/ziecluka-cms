@@ -9,7 +9,7 @@ class Blog extends Controller {
         $this->validator = new Validator();
     }
 
-    public function view($id) {
+    public function view($id = null) {
         /**
          * If there is no param in database it will generate an error
          */

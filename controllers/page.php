@@ -6,8 +6,12 @@ class Page extends Controller {
         parent::__construct();
         $this->main = new Main();
     }
+    
+    function index() {
+        $this->view->render('error/index');
+    }
 
-    function view($id) {
+    function view($id = null) {
         /**
          * If there is no param in database it will generate an error
          */
