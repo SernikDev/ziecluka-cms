@@ -7,10 +7,6 @@ class Page extends Controller {
         $this->main = new Main();
     }
 
-    function index() {
-        $this->view->render('page/index');
-    }
-
     function view($id) {
 //        $this->view->getTitle = $this->main->getTitle($id);
 //        $this->view->getId = $this->main->getId($id);
