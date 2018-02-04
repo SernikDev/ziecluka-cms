@@ -169,5 +169,5 @@ class Uploader {
     public function getModel() {
         return $this->_model;
     }
-
+    
 }

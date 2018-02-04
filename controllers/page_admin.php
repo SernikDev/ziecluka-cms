@@ -42,4 +42,48 @@ class Page_Admin extends Controller {
         $this->view->render('panel/footer');
     }
 
+    function add() {
+        Session::checkSession();
+
+        $url = new UrlGenerator();
+
+        /*
+         * 1. If there is empty title in input field, then generate error
+         * 2. Check if URL field is empty, if yes then generate URL only in Alias table from post Name, if its not empty check if URL is valid and check it database
+         * 3. Insert into table Post Name, Post Content, Post Author, Creation Date, Seo title, Seo url, Seo description
+         * 4. Insert into alias page/view controller with ID from Page and alias
+         */
+
+        if ($_POST["page-title"] == "") {
+            header("Location: " . URL . "page_admin");
+            Session::set("error", "Błąd numer 1. Coś poszło nie tak. Skontaktuj się z administratorem.");
+            exit();
+        } else {
+            if ($_POST["seo-url"] == "") {
+                $doUrl = $url->generateUrl($_POST["page-title"]);
+                if ($this->model->checkPageUrl($doUrl) == true) {
+                    $this->model->pageAdd($_POST["page-title"], $_POST["page-content"], $_SESSION["userid"], $_POST["seo-title"], $doUrl, $_POST["seo-description"]);
+                } else {
+                    $newUrl = $this->model->setUniquePageUrl($doUrl);
+                    $this->model->pageAdd($_POST["page-title"], $_POST["page-content"], $_SESSION["userid"], $_POST["seo-title"], $newUrl, $_POST["seo-description"]);
+                }
+            } else {
+                $doUrl = $url->generateUrl($_POST["seo-url"]);
+                if ($this->model->checkPageUrl($doUrl) == true) {
+                    $this->model->pageAdd($_POST["page-title"], $_POST["page-content"], $_SESSION["userid"], $_POST["seo-title"], $doUrl, $_POST["seo-description"]);
+                } else {
+                    $newUrl = $this->model->setUniquePageUrl($doUrl);
+                    $this->model->pageAdd($_POST["page-title"], $_POST["page-content"], $_SESSION["userid"], $_POST["seo-title"], $newUrl, $_POST["seo-description"]);
+                }
+            }
+        }
+        header("Location: " . URL . "page_admin");
+        Session::set("success", "Operacja zakończona pomyślnie.");
+    }
+
+    function fileBrowser() {
+        $this->view->images = $this->model->getImages("gallery");
+        $this->view->render('panel/filebrowser/content');
+    }
+
 }

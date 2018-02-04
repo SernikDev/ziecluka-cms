@@ -11,15 +11,26 @@ class Main extends Bootstrap {
 
     public function getSeo($id) {
         return $this->db->select("SELECT B.`pid`, B.`title`, B.`description` FROM `alias` A LEFT JOIN `seo` B ON A.`id` = B.`pid` AND A.`id` = :id;", array(
-            ":id" => $id
+                    ":id" => $id
         ));
     }
-    
+
     public function getBlogId($id) {
         $sql = "SELECT `id` FROM `alias` WHERE `controller` = :id;";
         $binds = array(":id" => "blog/view/{$id}");
-        
-        if($this->db->numRows($sql, $binds)->rowCount() == 1){
+
+        if ($this->db->numRows($sql, $binds)->rowCount() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function getPageId($id) {
+        $sql = "SELECT `id` FROM `alias` WHERE `controller` = :id;";
+        $binds = array(":id" => "page/view/{$id}");
+
+        if ($this->db->numRows($sql, $binds)->rowCount() == 1) {
             return true;
         } else {
             return false;
