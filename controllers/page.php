@@ -18,7 +18,9 @@ class Page extends Controller {
         if (empty($this->main->getPageId($id))) {
             $this->view->render('error/index');
         } else {
-            //$this->view->metaTitle = "Strona Główna - ziecluka.pl";
+            $this->view->metaTitle = $this->model->pageInfo($id)[0]["page_seo_title"];
+            $this->view->metaDescription = $this->model->pageInfo($id)[0]["page_seo_description"];
+            $this->view->pageInfo = $this->model->pageInfo($id);
             $this->view->css = "public/css/main.css";
             $this->view->render('header');
             $this->view->render('layout/header');

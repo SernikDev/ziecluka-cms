@@ -3,6 +3,7 @@
 <html lang="pl-PL" class="js">
 <head>
     <?php echo (!empty($this->metaTitle) ? "<title>" . $this->metaTitle . " - " . SITE_NAME ."</title>" : false) ?>
+    <?php echo (!empty($this->metaDescription) ? '<meta name="description" content="' . $this->metaDescription . '" />' : false) ?>
     <meta charset="UTF-8">
     <meta name="author" content="Łukasz Zięć" />
     <meta name="robots" content="noindex, nofollow" />
