@@ -6,7 +6,7 @@ class Page extends Controller {
         parent::__construct();
         $this->main = new Main();
     }
-    
+
     function index() {
         $this->view->render('error/index');
     }
@@ -18,7 +18,13 @@ class Page extends Controller {
         if (empty($this->main->getPageId($id))) {
             $this->view->render('error/index');
         } else {
-            $this->view->render('page/view');
+            //$this->view->metaTitle = "Strona Główna - ziecluka.pl";
+            $this->view->css = "public/css/main.css";
+            $this->view->render('header');
+            $this->view->render('layout/header');
+            $this->view->render('page/view/content');
+            $this->view->render('layout/footer');
+            $this->view->render('footer');
         }
     }
 

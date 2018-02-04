@@ -9,12 +9,6 @@ class Main extends Bootstrap {
         $this->db = new Database();
     }
 
-    public function getSeo($id) {
-        return $this->db->select("SELECT B.`pid`, B.`title`, B.`description` FROM `alias` A LEFT JOIN `seo` B ON A.`id` = B.`pid` AND A.`id` = :id;", array(
-                    ":id" => $id
-        ));
-    }
-
     public function getBlogId($id) {
         $sql = "SELECT `id` FROM `alias` WHERE `controller` = :id;";
         $binds = array(":id" => "blog/view/{$id}");
@@ -35,21 +29,6 @@ class Main extends Bootstrap {
         } else {
             return false;
         }
-    }
-
-    public function getTitle($id) {
-        $test = $this->getSeo($id);
-        return $test[0]['title'];
-    }
-
-    public function getId($id) {
-        $test = $this->getSeo($id);
-        return $test[0]['pid'];
-    }
-
-    public function getDescription($id) {
-        $test = $this->getSeo($id);
-        return $test[0]['description'];
     }
 
     public function cleanInput($data) {
