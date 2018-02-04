@@ -31,7 +31,7 @@ class Page_Admin extends Controller {
 
     function create() {
         Session::checkSession();
-        $this->view->metaTitle = "Dodaj now stronę";
+        $this->view->metaTitle = "Dodaj nową stronę";
         $this->view->javascript = URL . "plugins/ckeditor/ckeditor.js";
         $this->view->images = $this->model->getImages("gallery");
         $this->view->fileBrowser = "filebrowser";
