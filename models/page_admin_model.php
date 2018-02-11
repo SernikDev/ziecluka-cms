@@ -17,7 +17,7 @@ class Page_Admin_Model extends Model {
         ));
     }
 
-    function pageUpdate($page_id, $page_name, $page_content, $page_seo_title, $page_url, $page_seo_description) {
+    function pageUpdate($page_id, $page_image, $page_name, $page_content, $page_seo_title, $page_url, $page_seo_description) {
 
         if ($this->checkAliasChange($page_id, $page_url) == true) {
             $this->_pageUpdateUrl = $page_url;
@@ -25,8 +25,9 @@ class Page_Admin_Model extends Model {
             $this->_pageUpdateUrl = $this->setUniquePageUrl($page_url);
         }
 
-        $this->db->update("UPDATE `page` SET `page_name` = :page_name, `page_content` = :page_content, `page_seo_title` = :page_seo_title, `page_url` = :page_url, `page_seo_description` = :page_seo_description WHERE `page_id` = :page_id;", array(
+        $this->db->update("UPDATE `page` SET `page_name` = :page_name, `page_image_id` = :page_image_id, `page_content` = :page_content, `page_seo_title` = :page_seo_title, `page_url` = :page_url, `page_seo_description` = :page_seo_description WHERE `page_id` = :page_id;", array(
             ':page_name' => $page_name,
+            ':page_image_id' => $page_image,
             ':page_content' => $page_content,
             ':page_seo_title' => $page_seo_title,
             ':page_url' => $this->_pageUpdateUrl,
@@ -49,17 +50,18 @@ class Page_Admin_Model extends Model {
         }
     }
 
-    function pageAdd($page_name, $page_content, $page_author_id, $page_seo_title, $page_url, $page_seo_description) {
+    function pageAdd($page_image, $page_name, $page_content, $page_author_id, $page_seo_title, $page_url, $page_seo_description) {
 
         $url = $this->setUniquePageUrl($page_url);
 
-        $this->db->insert("INSERT INTO `page` (`page_name`, `page_content`, `page_author_id`, `page_create_date`, `page_seo_title`, `page_url`, `page_seo_description`) VALUES (:page_name, :page_content, :page_author_id, NOW(), :page_seo_title, :page_url, :page_seo_description);", array(
+        $this->db->insert("INSERT INTO `page` (`page_name`, `page_content`, `page_author_id`, `page_create_date`, `page_seo_title`, `page_url`, `page_seo_description`, `page_image_id`) VALUES (:page_name, :page_content, :page_author_id, NOW(), :page_seo_title, :page_url, :page_seo_description, :page_image);", array(
             ':page_name' => $page_name,
             ':page_content' => $page_content,
             ':page_author_id' => $page_author_id,
             ':page_seo_title' => $page_seo_title,
             ':page_url' => $url,
             ':page_seo_description' => $page_seo_description,
+            ':page_image' => $page_image
         ));
 
         $getId = $this->db->select("SELECT `page_id` FROM `page` WHERE `page_url` = :page_url;", array(

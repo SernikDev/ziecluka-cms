@@ -31,8 +31,8 @@
                     <div class="col s2"><?php echo $page["page_create_date"]; ?></div>
                     <div class="col s2">
                         <div class="col s4>"><a title="Wyświetl stronę" href="<?php echo URL . $page["page_url"]; ?>" target="_blank"><i class="material-icons green-text">cloud</i></a></div>
-                        <div class="col s4>"><a title="Edytuj stronę" href="blog_page/edit/<?php echo ¤page["page_id"]; ?>"><i class="material-icons orange-text">edit</i></a></div>
-                        <div class="col s4>"><a data-value="<?php echo $blog["blog_id"]; ?>" title="Usuń stronę" href="#deletepage" class="delete-page modal-trigger"><i class="material-icons red-text">cancel</i></a></div>
+                        <div class="col s4>"><a title="Edytuj stronę" href="page_admin/edit/<?php echo $page["page_id"]; ?>"><i class="material-icons orange-text">edit</i></a></div>
+                        <div class="col s4>"><a data-value="<?php echo $page["page_id"]; ?>" title="Usuń stronę" href="#deletepage" class="delete-page modal-trigger"><i class="material-icons red-text">cancel</i></a></div>
                     </div>
                 </div>
             <?php endforeach; ?>
